@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EyobTravel · prueba optimización imágenes</title>
+    <!-- Estilos principales del sitio (sin modificar) + hoja de estilos específica para la prueba -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-prueba.css">
+</head>
+<body>
+
+    <!-- 
+        =================================================================
+        ARCHIVO DE PRUEBA – OPTIMIZACIÓN DE IMÁGENES (ANTES / DESPUÉS)
+        =================================================================
+        Usos respetados: hero, perfil equipo, logo, icono nav, infografía,
+        banner sidebar, animación, producto, icono footer, comparación AVIF/JPEG.
+    -->
+
+    <!-- HEADER (idéntico al del sitio, pero con LOGO y NAV icónico de prueba) -->
+    <header class="prueba-header">
+        <div class="header-container">
+            <!-- 03_Logotipo.png (PNG) – logo del sitio, afecta CLS si no tiene dimensiones -->
+            <div class="logo logo-prueba">
+                <img src="images/prueba/03_Logotipo.png"
+                     alt="EyobTravel logo"
+                     width="180" height="48">
+                <!-- width/height explícitos para evitar CLS (prueba) -->
+                <a href="index.html">EyobTravel</a>
+            </div>
+            <nav>
+                <ul>
+                    <!-- 04_Icono_nav.png (PNG) – icono de navegación (junto a inicio) -->
+                    <li>
+                        <img src="images/prueba/04_Icono_nav.png"
+                             alt="Inicio"
+                             class="nav-icon">
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li><a href="#">Destinos</a></li>
+                    <li><a href="#">Ofertas</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="prueba-main">
+        <!-- 01_Fotografia_Paisaje.jpg – HERO (LCP) -->
+        <section class="hero-prueba">
+            <img src="images/prueba/01_Fotografia_Paisaje.jpg"
+                 alt="Paisaje de montaña – imagen hero principal"
+                 class="hero-img"
+                 width="1200" height="600">
+            <div class="hero-overlay">
+                <h1>Prueba de optimización: antes / después</h1>
+                <p>Esta imagen de paisaje (JPEG) afecta directamente al LCP.</p>
+            </div>
+        </section>
+
+        <!-- CONTENEDOR CON DOS COLUMNAS: equipo + sidebar -->
+        <div class="two-columns">
+            <!-- COLUMNA IZQUIERDA: equipo, infografía, producto -->
+            <div class="left-col">
+
+                <!-- 02_Retrato.jpg – sección equipo (foto perfil) -->
+                <div class="equipo-section">
+                    <h2>Nuestro equipo local</h2>
+                    <div class="perfil-equipo">
+                        <div class="perfil-card">
+                            <img src="images/prueba/02_Retrato.jpg"
+                                 alt="María González, guía local"
+                                 class="foto-perfil"
+                                 width="150" height="150">
+                            <h3>María González</h3>
+                            <p>Guía en Andalucía · 8 años de experiencia</p>
+                        </div>
+                        <div class="perfil-card">
+                            <!-- repetimos la misma imagen para mostrar ejemplo, pero podrían ser distintas -->
+                            <img src="images/prueba/02_Retrato.jpg"
+                                 alt="María González, fotógrafa"
+                                 class="foto-perfil"
+                                 width="150" height="150">
+                            <h3>María González</h3>
+                            <p>Especialista en rutas de montaña</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 05_Infografia.png – gráfico con texto incrustado -->
+                <div class="infografia-section">
+                    <h3>Mejores momentos para viajar (infografía)</h3>
+                    <img src="images/prueba/05_Infografia.png"
+                         alt="Infografía: clima y temporada recomendada por destino"
+                         class="infografia-img"
+                         width="600" height="300">
+                    <p class="pie">*Infografía PNG con texto incrustado (prueba peso/calidad).</p>
+                </div>
+
+                <!-- 08_Imagen_producto.webp – tienda online (experiencias) -->
+                <div class="producto-section">
+                    <h3>Experiencia destacada · Ruta del estrella</h3>
+                    <div class="producto-card">
+                        <img src="images/prueba/08_Imagen_producto.webp"
+                             alt="Pack aventura: senderismo con cena"
+                             class="producto-img"
+                             width="300" height="200">
+                        <div class="producto-info">
+                            <h4>Senderismo + cena con vistas</h4>
+                            <p>Incluye guía local, picnic gourmet y fotos. Formato WebP.</p>
+                            <span class="precio">79€ / persona</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA (sidebar) -->
+            <aside class="sidebar">
+                <!-- 06_Banner_publicitario.jpg – imagen destacada en sidebar -->
+                <div class="banner-sidebar">
+                    <h4>Oferta relámpago</h4>
+                    <img src="images/prueba/06_Banner_publicitario.jpg"
+                         alt="30% descuento en escapadas"
+                         class="banner-img"
+                         width="300" height="250">
+                    <p>Válido hasta fin de mes · reserva ya</p>
+                </div>
+
+                <!-- 07_Animacion_simple.gif – banner animado (dentro sidebar) -->
+                <div class="banner-animado">
+                    <h4>Animación promocional</h4>
+                    <img src="images/prueba/07_Animacion_simple.gif"
+                         alt="destinos girando - animación"
+                         class="gif-banner"
+                         width="280" height="160">
+                    <p class="nota">GIF animado (antes de optimizar).</p>
+                </div>
+
+                <!-- 10_Fotografia_alta_calidad.avif – comparación con JPEG
+                    (colocamos una minigaleria de comparación) -->
+                <div class="comparacion-avif">
+                    <h4>Comparación AVIF vs JPEG (calidad alta)</h4>
+                    <div class="comp-grid">
+                        <figure>
+                            <img src="images/prueba/10_Fotografia_alta_calidad.avif"
+                                 alt="imagen AVIF moderna"
+                                 width="140" height="100">
+                            <figcaption>AVIF · 30% menor peso</figcaption>
+                        </figure>
+                        <figure>
+                            <!-- Para la comparación usamos la imagen JPG de las imágenes dadas. -->
+                            <img src="images/prueba/01_Fotografia_Paisaje.jpg"
+                                 alt="mismo motivo en JPEG"
+                                 width="140" height="100">
+                            <figcaption>JPEG (original) · más peso</figcaption>
+                        </figure>
+                    </div>
+                    <p class="nota">* La imagen AVIF (dcha) ofrece calidad similar con menos bytes.</p>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 09_Icono_escalable.svg – icono vectorial en footer (dentro del main para probar, pero luego está también en footer) -->
+        <div class="demo-vectorial">
+            <h3>Icono vectorial SVG (escalable sin pérdida)</h3>
+            <img src="images/prueba/09_Icono_escalable.svg"
+                 alt="icono viaje escalable"
+                 class="svg-demo"
+                 width="60" height="60">
+            <span>Este icono permanece nítido al ampliar.</span>
+        </div>
+    </main>
+
+    <!-- FOOTER (similar al original, pero incluye el icono SVG escalable) -->
+    <footer class="prueba-footer">
+        <div class="footer-grid">
+            <form class="contact-form">
+                <h3>Contáctanos</h3>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Email">
+                <textarea rows="4" placeholder="Mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div>
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li>Quiénes somos</li>
+                    <li>Preguntas frecuentes</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Ayuda</h4>
+                <ul>
+                    <li>Soporte</li>
+                    <li>Contacto</li>
+                </ul>
+                <!-- 09_Icono_escalable.svg repetido en footer como ejemplo de icono escalable -->
+                <div class="footer-icono-svg">
+                    <img src="images/prueba/09_Icono_escalable.svg"
+                         alt="icono escalable"
+                         width="40" height="40">
+                    <span>® 2025 EyobTravel</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

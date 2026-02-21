@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión | EyobTravel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="images/logo.png" alt=""><a href="index.html">EyobTravel</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li><a href="register.html">Regístrate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- LOGIN HERO -->
+    <section class="auth-hero">
+        <h1>Iniciar Sesión</h1>
+        <p>Accede a tu cuenta para reservar aventuras inolvidables</p>
+    </section>
+
+    <!-- FORMULARIO DE LOGIN -->
+    <section class="auth-form-section">
+        <form id="loginForm" class="auth-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Tu email" required aria-required="true">
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password" placeholder="Tu contraseña" required aria-required="true">
+
+            <button type="submit">Iniciar sesión</button>
+            <div id="loginMessage" class="auth-message"></div>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <form class="contact-form">
+                <h3>Contáctanos</h3>
+                <input type="text" placeholder="Nombre">
+                <input type="email" placeholder="Email">
+                <textarea rows="4" placeholder="Mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div>
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li>Quiénes somos</li>
+                    <li>Preguntas frecuentes</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Ayuda</h4>
+                <ul>
+                    <li>Soporte</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

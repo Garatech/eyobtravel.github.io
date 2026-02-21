@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas | EyobTravel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="logo"><img src="images/logo.png" alt=""><a href="index.html">EyobTravel</a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li><a href="register.html">Regístrate</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="ofertas-hero">
+        <h2>Ofertas exclusivas</h2>
+        <p>Descuentos reales por tiempo limitado</p>
+    </section>
+
+    <!-- FILTROS -->
+    <div class="filters">
+        <select id="sortSelect">
+            <option value="">Ordenar por</option>
+            <option value="price">Precio más bajo</option>
+            <option value="rating">Mejor valoración</option>
+        </select>
+
+        <input type="number" id="maxPrice" placeholder="Precio máx (€)">
+        <select id="minRating">
+            <option value="">Rating mínimo</option>
+            <option value="4">4⭐ o más</option>
+            <option value="4.5">4.5⭐ o más</option>
+        </select>
+    </div>
+
+    <section class="ofertas-list" id="ofertasList">
+
+        <!-- PRIMERA OFERTA -->
+        <div class="booking-card">
+
+            <!-- IMAGEN -->
+            <div class="booking-image">
+                <img src="images/granada.jpg" alt="Granada City">
+                <button class="fav-btn">♡</button>
+            </div>
+
+            <!-- INFO CENTRAL -->
+            <div class="booking-info">
+                <h3>
+                    Hotel Granada City
+                    <span class="stars">★★★★</span>
+                </h3>
+
+                <div class="location">
+                    Centro de Granada, Granada ·
+                    <a href="#">Mostrar en el mapa</a>
+                </div>
+
+                <div class="distance">📍 A 1 km del centro</div>
+
+                <p class="description">
+                    Situado a 10 minutos a pie del centro histórico y a 5 minutos de la estación.
+                    WiFi gratuito y parking privado.
+                </p>
+
+                <div class="tags">
+                    <span class="tag success">Cancelación gratis</span>
+                    <span class="tag">Desayuno incluido</span>
+                    <span class="tag">Wi-Fi</span>
+                    <span class="tag">Parking</span>
+                </div>
+            </div>
+
+            <!-- PRECIO / CTA -->
+            <div class="booking-price">
+                <div class="rating-box">
+                    <div>
+                        <strong>Fantástico</strong>
+                        <span>10.867 comentarios</span>
+                    </div>
+                    <div class="rating-score">9,2</div>
+                </div>
+
+                <div class="price">
+                    <span class="old">€120</span>
+                    <span class="current">€60</span>
+                    <span class="per-night">por noche</span>
+                </div>
+
+                <span class="deal">50% OFF</span>
+                <button class="cta-btn">Mostrar opciones</button>
+            </div>
+
+        </div>
+
+        <!-- SEGUNDA OFERTA -->
+        <div class="booking-card">
+
+            <!-- IMAGEN -->
+            <div class="booking-image">
+                <img src="images/amsterdam.jpg" alt="Amsterdam City">
+                <button class="fav-btn">♡</button>
+            </div>
+
+            <!-- INFO CENTRAL -->
+            <div class="booking-info">
+                <h3>
+                    Fin de Semana en Ámsterdam
+                    <span class="stars">★★★★</span>
+                </h3>
+
+                <div class="location">
+                    Oud Zuid, Ámsterdam ·
+                    <a href="#">Mostrar en el mapa</a>
+                </div>
+
+                <div class="distance">📍 A 1 km del centro</div>
+
+                <p class="description">
+                    Situado exactamente en el centro de la ciudad. Plan de hotel con
+                    dos habitaciones.
+                </p>
+
+                <div class="tags">
+                    <span class="tag success">Cancelación gratis</span>
+                    <span class="tag">Desayuno incluido</span>
+                    <span class="tag">Cena incluida</span>
+                    <span class="tag">Wi-Fi</span>
+                </div>
+            </div>
+
+            <!-- PRECIO / CTA -->
+            <div class="booking-price">
+                <div class="rating-box">
+                    <div>
+                        <strong>Fantástico</strong>
+                        <span>9.127 comentarios</span>
+                    </div>
+                    <div class="rating-score">8,7</div>
+                </div>
+
+                <div class="price">
+                    <span class="old">€269</span>
+                    <span class="current">€180</span>
+                    <span class="per-night">por noche</span>
+                </div>
+
+                <span class="deal">14% OFF</span>
+                <button class="cta-btn">Mostrar opciones</button>
+            </div>
+
+        </div>
+
+        <!-- TERCERA OFERTA -->
+        <div class="booking-card">
+
+            <!-- IMAGEN -->
+            <div class="booking-image">
+                <img src="images/marrakech2.jpg" alt="Marrakesh City">
+                <button class="fav-btn">♡</button>
+            </div>
+
+            <!-- INFO CENTRAL -->
+            <div class="booking-info">
+                <h3>
+                    Riad en Marrakech
+                    <span class="stars">★★★★★</span>
+                </h3>
+
+                <div class="location">
+                    Bab Doukkala ·
+                    <a href="#">Mostrar en el mapa</a>
+                </div>
+
+                <div class="distance">📍 A 1 km del centro</div>
+
+                <p class="description">
+                    Asistencia turística personalizada, Desayuno tradicional marroquí. Plan
+                    de Riad tradicional con spa, terraza y desayuno incluido.
+                </p>
+
+                <div class="tags">
+                    <span class="tag success">Cancelación gratis</span>
+                    <span class="tag">Desayuno incluido</span>
+                    <span class="tag">Wi-Fi</span>
+                    <span class="tag">Experiencias Culturales</span>
+                </div>
+            </div>
+
+            <!-- PRECIO / CTA -->
+            <div class="booking-price">
+                <div class="rating-box">
+                    <div>
+                        <strong>Espectacular</strong>
+                        <span>12.252 comentarios</span>
+                    </div>
+                    <div class="rating-score">9,6</div>
+                </div>
+
+                <div class="price">
+                    <span class="old">€333</span>
+                    <span class="current">€199</span>
+                    <span class="per-night">por noche</span>
+                </div>
+
+                <span class="deal">30% OFF</span>
+                <button class="cta-btn">Mostrar opciones</button>
+            </div>
+
+        </div>
+
+        <!-- CUARTA OFERTA -->
+        <div class="booking-card">
+
+            <!-- IMAGEN -->
+            <div class="booking-image">
+                <img src="images/warsaw.jpg" alt="Warsaw City">
+                <button class="fav-btn">♡</button>
+            </div>
+
+            <!-- INFO CENTRAL -->
+            <div class="booking-info">
+                <h3>
+                    Tres Noches en Varsovia
+                    <span class="stars">★★★★★</span>
+                </h3>
+
+                <div class="location">
+                    Stara Praga ·
+                    <a href="#">Mostrar en el mapa</a>
+                </div>
+
+                <div class="distance">📍 A 2 km del centro</div>
+
+                <p class="description">
+                    El Hotel se encuentra frente al Palacio de la Cultura y la Ciencia de Varsovia y ofrece
+                    habitaciones amplias con wifi gratuita.
+                </p>
+
+                <div class="tags">
+                    <span class="tag success">Cancelación gratis</span>
+                    <span class="tag">Desayuno incluido</span>
+                    <span class="tag">Comida incluida</span>
+                    <span class="tag">Wi-Fi</span>
+                    <span class="tag">Parking</span>
+                </div>
+            </div>
+
+            <!-- PRECIO / CTA -->
+            <div class="booking-price">
+                <div class="rating-box">
+                    <div>
+                        <strong>Fantástico</strong>
+                        <span>10.111 comentarios</span>
+                    </div>
+                    <div class="rating-score">9,1</div>
+                </div>
+
+                <div class="price">
+                    <span class="current">Desde €52</span>
+                    <span class="per-night">por noche</span>
+                </div>
+
+                <span class="deal">15% OFF</span>
+                <button class="cta-btn">Mostrar opciones</button>
+            </div>
+
+        </div>
+
+        <!-- QUINTA OFERTA -->
+        <div class="booking-card">
+
+            <!-- IMAGEN -->
+            <div class="booking-image">
+                <img src="images/lisbon.jpg" alt="Lisbon City">
+                <button class="fav-btn">♡</button>
+            </div>
+
+            <!-- INFO CENTRAL -->
+            <div class="booking-info">
+                <h3>
+                    Verano en Lisboa
+                    <span class="stars">★★★★</span>
+                </h3>
+
+                <div class="location">
+                    Vila Cândida ·
+                    <a href="#">Mostrar en el mapa</a>
+                </div>
+
+                <div class="distance">📍 En el centro</div>
+
+                <p class="description">
+                    El Hotel goza de una ubicación céntrica en la prestigiosa Avenida da
+                    Liberdade de Lisboa, a pocos minutos de la plaza de los Restauradores.
+                </p>
+
+                <div class="tags">
+                    <span class="tag success">Cancelación gratis</span>
+                    <span class="tag">Todo incluido</span>
+                    <span class="tag">Wi-Fi</span>
+                    <span class="tag">Parking</span>
+                    <span class="tag">Vistas al mar</span>
+                </div>
+            </div>
+
+            <!-- PRECIO / CTA -->
+            <div class="booking-price">
+                <div class="rating-box">
+                    <div>
+                        <strong>Fantástico</strong>
+                        <span>18.001 comentarios</span>
+                    </div>
+                    <div class="rating-score">8,4</div>
+                </div>
+
+                <div class="price">
+                    <span class="current">Desde €102</span>
+                    <span class="per-night">por noche</span>
+                </div>
+
+                <span class="deal">10% OFF</span>
+                <button class="cta-btn">Mostrar opciones</button>
+            </div>
+
+        </div>
+
+        <!-- SEXTA OFERTA -->
+        <div class="booking-card">
+
+            <!-- IMAGEN -->
+            <div class="booking-image">
+                <img src="images/seoul.jpg" alt="Seoul City">
+                <button class="fav-btn">♡</button>
+            </div>
+
+            <!-- INFO CENTRAL -->
+            <div class="booking-info">
+                <h3>
+                    Una Semana en Seúl
+                    <span class="stars">★★★★★</span>
+                </h3>
+
+                <div class="location">
+                    Gangnam District ·
+                    <a href="#">Mostrar en el mapa</a>
+                </div>
+
+                <div class="distance">📍 En el centro</div>
+
+                <p class="description">
+                    El Hotel Gangnam está muy bien situado en el barrio de Gangnam-Gu, Seúl, a 1,9 km de Estación de
+                    metro
+                    Gangnam. Vida nocturna, gastronomía y ocio para todos.
+                </p>
+
+                <div class="tags">
+                    <span class="tag success">Cancelación gratis</span>
+                    <span class="tag">Desayuno incluido</span>
+                    <span class="tag">Wi-Fi</span>
+                    <span class="tag">Experiencias Culturales</span>
+                    <span class="tag">Vida nocturna</span>
+                </div>
+            </div>
+
+            <!-- PRECIO / CTA -->
+            <div class="booking-price">
+                <div class="rating-box">
+                    <div>
+                        <strong>Fantástico</strong>
+                        <span>7.211 comentarios</span>
+                    </div>
+                    <div class="rating-score">9,0</div>
+                </div>
+
+                <div class="price">
+                    <span class="old">Desde €369</span>
+                    <span class="current">Desde €256</span>
+                    <span class="per-night">por noche</span>
+                </div>
+
+                <span class="deal">40% OFF</span>
+                <button class="cta-btn">Mostrar opciones</button>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BOTÓN MOSTRAR MÁS -->
+    <div class="show-more-container">
+        <button class="show-more-btn">Mostrar más</button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <form class="contact-form">
+                <h3>Contáctanos</h3>
+                <label for="name"></label>
+                <input type="text" placeholder="Nombre">
+                <label for="email"></label>
+                <input type="email" placeholder="Email">
+                <label for="message"></label>
+                <textarea rows="4" placeholder="Mensaje"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div>
+                <h4>Sobre nosotros</h4>
+                <ul>
+                    <li>Quiénes somos</li>
+                    <li>Preguntas frecuentes</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Ayuda</h4>
+                <ul>
+                    <li>Soporte</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
