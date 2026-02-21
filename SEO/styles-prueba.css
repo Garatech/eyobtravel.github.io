@@ -1,0 +1,306 @@
+/* ======================================================
+   styles-prueba.css – Hoja específica para la página de prueba
+   (optimización de imágenes, antes/después)
+   ====================================================== */
+
+/* Ajustes generales para la página de prueba */
+.prueba-main {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1rem 2rem 3rem;
+}
+
+/* HEADER ajustes (respetando logo y nav) */
+.prueba-header .header-container {
+    background: transparent; /* hereda de styles.css, solo retoques */
+}
+
+.logo-prueba {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.logo-prueba img {
+    display: block;
+    height: auto;
+    max-width: 20%;
+}
+
+/* icono de navegación (04_Icono_nav.png) */
+.nav-icon {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+/* HERO específico de prueba (imagen LCP) */
+.hero-prueba {
+    position: relative;
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 2rem 0 3rem;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    max-height: 600px;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.hero-overlay p {
+    font-size: 1.2rem;
+    color: #f0eae5;
+}
+
+/* COLUMNAS: izquierda / derecha */
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* --- COLUMNA IZQUIERDA --- */
+.left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* equipo (perfiles) */
+.equipo-section h2 {
+    color: #4a3227;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+}
+
+.perfil-equipo {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.perfil-card {
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    flex: 1 1 200px;
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f4ede6;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.perfil-card h3 {
+    margin: 0.8rem 0 0.2rem;
+    color: #3b2a22;
+}
+
+.perfil-card p {
+    font-size: 0.9rem;
+    color: #6b4b3c;
+}
+
+/* infografía */
+.infografia-section {
+    background: #fcf9f6;
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.infografia-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    margin: 0.8rem 0;
+}
+
+.pie, .nota {
+    font-size: 0.85rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* producto (webp) */
+.producto-card {
+    display: flex;
+    background: white;
+    border-radius: 16px;
+    padding: 1rem;
+    gap: 1rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    align-items: center;
+}
+
+.producto-img {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.producto-info h4 {
+    color: #c76a2a;
+    margin-bottom: 0.3rem;
+}
+
+.precio {
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: #924c13;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+    background: #f4ede6;
+    padding: 1.5rem;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-self: start;
+}
+
+.banner-sidebar, .banner-animado, .comparacion-avif {
+    background: white;
+    padding: 1rem;
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.03);
+    text-align: center;
+}
+
+.banner-img, .gif-banner {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 0.5rem 0;
+}
+
+.gif-banner {
+    max-height: 160px;
+    object-fit: cover;
+}
+
+.comparacion-avif .comp-grid {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.comp-grid figure {
+    margin: 0;
+    text-align: center;
+}
+
+.comp-grid img {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.comp-grid figcaption {
+    font-size: 0.75rem;
+    color: #3b2a22;
+}
+
+/* demo vectorial (SVG) */
+.demo-vectorial {
+    background: #e6d9d0;
+    padding: 1.2rem 2rem;
+    border-radius: 40px;
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 3rem 0 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.svg-demo {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+/* footer ajustes para icono SVG */
+.footer-icono-svg {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid #5f4a3a;
+    padding-top: 0.8rem;
+}
+
+.footer-icono-svg img {
+    filter: brightness(0) invert(1); /* blanco sobre footer oscuro */
+    opacity: 0.9;
+}
+
+.prueba-footer {
+    margin-top: 2rem;
+}
+
+/* responsive básico */
+@media (max-width: 900px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+    .hero-overlay h1 {
+        font-size: 1.8rem;
+    }
+    .producto-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .demo-vectorial {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .perfil-equipo {
+        justify-content: center;
+    }
+}

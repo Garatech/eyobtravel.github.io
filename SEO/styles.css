@@ -1,0 +1,890 @@
+/* ---------------- ESTILOS GENERALES ---------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f4ede6;
+    color: #3b2a22;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 8px rgba(60, 38, 27, 0.4), 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    color: #3B2A22;
+    text-shadow: 2px 2px 8px rgba(175, 175, 175, 0.4), 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(60, 38, 27, 0.85);
+    backdrop-filter: blur(6px);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+nav li {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+nav li:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------ HOMEPAGE ------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------- HERO SECTION ---------------- */
+.hero {
+    height: 60vh;
+    width: 1000vh;
+    background:
+        linear-gradient(rgba(90, 60, 45, 0.55),
+            rgba(180, 140, 110, 0.35)),
+        url("images/background.jpg") center / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0 10rem;
+}
+
+/* ---------------- BARRA DE BÚSQUEDA ---------------- */
+.search-box {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) auto;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.search-box input,
+.search-box select {
+    padding: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+}
+
+.search-box button {
+    padding: 0.9rem 1.6rem;
+    background: #c76a2a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #b45e25;
+}
+
+/* ---------------- SECTIONS ---------------- */
+section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    color: #4a3227;
+}
+
+/* ---------------- OFERTAS DESTACADAS ---------------- */
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+}
+
+.offer-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    cursor: pointer;
+}
+
+/* ---------------- HOVER DE LA OFERTA DESTACADA ---------------- */
+.offer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.18);
+}
+
+.offer-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.offer-card:hover img {
+    transform: scale(1.03);
+}
+
+.offer-content {
+    padding: 1.2rem;
+}
+
+.offer-content h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.price {
+    color: #c76a2a;
+    font-weight: 600;
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    background: #3b2a22;
+    color: #fff;
+    position: relative;
+    background: #3b2a22;
+    padding: 6rem 2rem 3rem;
+}
+
+.footer-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr;
+    gap: 2.5rem;
+    font-size: 0.9rem;
+    align-items: flex-start;
+}
+
+/* ---------------- FORMULARIO DE CONTACTO ---------------- */
+.contact-form {
+    transform: translateY(-90px);
+    position: relative;
+    top: -25px;
+    z-index: 5;
+    background: #fff;
+    color: #3b2a22;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.25),
+        0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 0.9rem;
+    background: #c76a2a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+footer h4 {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin-bottom: 0.5rem;
+    opacity: 0.85;
+}
+
+footer li:hover {
+    opacity: 1;
+}
+
+/* ---------------- RESPONSIVE - HOMEPAGE ---------------- */
+@media (max-width: 900px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-box {
+        grid-template-columns: 1fr;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .contact-form {
+        top: 0;
+    }
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------ DESTINOS ------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.destinos-hero {
+    padding-top: 140px;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.destinos-hero h1 {
+    font-size: 2.4rem;
+    color: #4a3227;
+    margin-bottom: 0.8rem;
+}
+
+.destinos-hero p {
+    color: #6b4b3c;
+}
+
+/* ---------------- GALERÍA DE DESTINOS ---------------- */
+.destinos-grid {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+}
+
+.destino-card {
+    position: relative;
+    height: 220px;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.destino-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+}
+
+.destino-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destino-card:hover img {
+    transform: scale(1.08);
+}
+
+/* ---------------- EFECTO OVERLAY DE LAS IMÁGENES ---------------- */
+.destino-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top,
+            rgba(50, 30, 20, 0.85),
+            rgba(50, 30, 20, 0.2));
+}
+
+.destino-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+/* ---------------- RESPONSIVE - DESTINOS ---------------- */
+@media (max-width: 1100px) {
+    .destinos-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .destinos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------ OFERTAS -------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------- CARTAS DE VIAJE ---------------- */
+
+.booking-card {
+    display: grid;
+    grid-template-columns: 260px 1fr 220px;
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.8rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- IMÁGENES ---------------- */
+.booking-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    max-height: 300px;
+    max-width: 260px;
+}
+
+.booking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.booking-image:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ---------------- BOTÓN DE FAVORITO ---------------- */
+.fav-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: white;
+    border-radius: 50%;
+    border: none;
+    padding: 0.4rem 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* ---------------- INFO DE LA OFERTA ---------------- */
+.booking-info h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.stars {
+    color: #f5b50a;
+    font-size: 0.9rem;
+}
+
+.location,
+.distance {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+.location a {
+    color: #006ce4;
+    text-decoration: none;
+}
+
+.description {
+    font-size: 0.9rem;
+    margin: 0.7rem 0;
+    color: #333;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #eef2f6;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+.tag.success {
+    background: #e6f4ea;
+    color: #137333;
+}
+
+/* ---------------- PRECIO ---------------- */
+.booking-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* ---------------- BOX DE CALIFICACIÓN ---------------- */
+.rating-box {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.rating-box span {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.rating-score {
+    background: #8a4d08;
+    color: white;
+    font-weight: bold;
+    padding: 0.4rem 0.5rem;
+    border-radius: 6px;
+}
+
+.price {
+    margin: 1rem 0;
+}
+
+.price .old {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.85rem;
+}
+
+.price .current {
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+}
+
+.per-night {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.deal {
+    background: #c50906;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.cta-btn {
+    background: #924c13;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.cta-btn:hover {
+    background: #f4ede6;
+    color: #3b2a22;
+    border: 1px solid #3b2a22;
+}
+
+/* ---------------- RESPONSIVE - OFERTAS ---------------- */
+@media (max-width: 900px) {
+    .booking-card {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-price {
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+
+/* ---------------- FILTROS OFERTAS ---------------- */
+.filters {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem 2rem;
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filters select,
+.filters input {
+    padding: 0.6rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.ofertas-list {
+    padding-top: 1rem;
+}
+
+.ofertas-hero {
+    padding-bottom: 1rem;
+}
+
+.ofertas-hero h2 {
+    font-size: 2.4rem;
+    color: #4a3227;
+    margin-bottom: 0.8rem;
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- BLOG --------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------- BLOG HERO ---------------- */
+.blog-hero {
+    padding-top: 140px;
+    padding-bottom: 3rem;
+    text-align: center;
+}
+
+.blog-hero h1 {
+    font-size: 2.4rem;
+    color: #4a3227;
+    margin-bottom: 0.8rem;
+}
+
+.blog-hero p {
+    color: #6b4b3c;
+}
+
+/* ---------------- BLOGS LIST ---------------- */
+.blogs-list {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* ---------------- REVIEW CARD (TARJETA DE RESEÑA) ---------------- */
+.review-card {
+    display: grid;
+    grid-template-columns: 120px 1fr 200px;
+    /* Izquierda: perfil, Centro: info, Derecha: imagen cuadrada */
+    gap: 1.5rem;
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    margin-bottom: 1.8rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------------- REVIEW PROFILE (FOTO Y NOMBRE) ---------------- */
+.review-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.review-profile img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.username {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3b2a22;
+}
+
+/* ---------------- REVIEW INFO (TÍTULO, TEXTO, INTERACCIONES) ---------------- */
+.review-info h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: #c76a2a;
+    /* Estilizado bonito: color naranja, negrita y sombra ligera */
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.review-text {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.interactions-bar {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: #666;
+    border-top: 1px solid #eee;
+    padding-top: 0.5rem;
+}
+
+/* ---------------- REVIEW IMAGE (FOTO DEL DESTINO, CUADRADO) ---------------- */
+.review-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.review-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 900px) {
+    .review-card {
+        grid-template-columns: 1fr;
+    }
+
+    .review-profile {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .review-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* ---------------- SHOW MORE BUTTON ---------------- */
+.show-more-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    ;
+}
+
+.show-more-btn {
+    padding: 0.8rem 10rem;
+    background: linear-gradient(to bottom, rgba(60, 38, 27, 0.85), rgba(60, 38, 27, 0.6));
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.show-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------------------- INICIO DE SESIÓN Y REGISTRO -------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ---------------- AUTH HERO ---------------- */
+.auth-hero {
+    padding-top: 140px;
+    padding-bottom: 1rem;
+    text-align: center;
+}
+
+.auth-hero h1 {
+    font-size: 2.4rem;
+    color: #4a3227;
+    margin-bottom: 0.8rem;
+}
+
+.auth-hero p {
+    color: #6b4b3c;
+}
+
+/* ---------------- AUTH FORM SECTION ---------------- */
+.auth-form-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+/* ---------------- AUTH FORM ---------------- */
+.auth-form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-form label {
+    font-size: 0.95rem;
+    color: #3b2a22;
+    font-weight: 600;
+}
+
+.auth-form input {
+    padding: 0.9rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.auth-form input:hover,
+.auth-form input:focus {
+    border-color: #c76a2a;
+    box-shadow: 0 0 8px rgba(199, 106, 42, 0.3);
+    transform: translateY(-2px);
+}
+
+.auth-form button {
+    padding: 0.9rem;
+    background: #c76a2a;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.auth-form button:hover {
+    background: #b45e25;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------------- AUTH MESSAGE ---------------- */
+.auth-message {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #137333; /* Verde éxito */
+    margin-top: 1rem;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: #e6f4ea; /* Fondo verde claro */
+    display: none; /* Oculto por defecto */
+}
